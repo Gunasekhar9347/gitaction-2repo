@@ -20,3 +20,7 @@ on:
 jobs:
   caller-reusable:
     uses: ./.github/workflows/original.yml
+
+  call-reusable_from_another_repo:
+    uses: Gunasekhar9347/gitactions-1/.github/workflows/blank.yml@main
+    
