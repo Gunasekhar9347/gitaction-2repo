@@ -1,0 +1,12 @@
+name: original CI
+
+on:
+  workflow_call:
+
+jobs:
+  reusable-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run scripts from Original
+        run: echo "Hi, we are using the reusable file on git hub actions
+  
