@@ -4,15 +4,19 @@ on:
   push:
     branches:
       - main
-    paths:
-     - "original.txt"
+    # paths:
+    #  - "original.txt"
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+
+#       - name: Run job
+#         run: echo "Running My first PipeLine through github action."
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Run job
-        run: echo "Running My first PipeLine through github action."
+  caller-reusable:
+    uses: ./.github/workflows/original.yml
